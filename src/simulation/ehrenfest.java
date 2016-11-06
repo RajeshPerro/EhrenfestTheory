@@ -4,24 +4,21 @@
  * and open the template in the editor.
  */
 package simulation;
-
-import static java.lang.Math.log;
 import java.util.Random;
 import java.util.Scanner;
-import static jdk.nashorn.internal.parser.TokenType.EOF;
 
 /**
  *
  * @author rajesh
  */
-public class task {
+public class ehrenfest {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int start = 1,end,at,bt,r,x = 0,y = 0,counter=1,num=1,flag=0;
+        int start = 1,end,at,bt,r = 0,x = 0,y = 0,counter=1,num=1,flag=0;
         
         Random random = new Random();
         Scanner sc = new Scanner(System.in);
@@ -38,24 +35,21 @@ public class task {
             {
                 x = at--;
                 y = bt++;
+                System.out.println("State for Dog-1 : "+x +" --> State for Dog-2 : "+y);
             }
             else
             {
                 
                 x = at++;
                 y = bt--;
+                System.out.println("State for Dog-1 : "+x +" --> State for Dog-2 : "+y);
             }
           
          System.out.println("The Random Number : "+r+" 'at' = "+at);
          
-         if(x!=1)
-         {
-             System.out.println("State for Dog-1 : "+x +" --> State for Dog-2 : "+y);
-         }
-         
-         
          counter++;   
         }
+        
         System.out.println("State for Dog-1 : "+at +" --> State for Dog-2 : "+bt);
         System.out.println("Number of Iteration Needed : " +counter);
     
